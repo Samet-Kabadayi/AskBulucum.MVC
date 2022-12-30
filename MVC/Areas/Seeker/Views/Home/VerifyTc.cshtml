@@ -1,0 +1,58 @@
+﻿@model CheckPerson
+
+<div class="content-wrapper">
+
+    <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+
+        <h4 class="fw-bold py-3 mb-4">
+            <span class="text-muted fw-light">Hesap Ayarları /</span> Kimlik Doğrula
+        </h4>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="card mb-4">
+                    <hr class="my-0">
+                    <div class="card-body">
+                        <form id="formAccountSettings" method="post">
+                            <div asp-validation-summary="All" class="row text-danger small" >
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label text-capitalize">İsim</label>
+                                    <input asp-for="FirstName" name="FirstName" class="form-control text-uppercase" type="text" disabled="disabled" value="@User.FindFirst("Name").Value" autofocus="">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label for="lastName" class="form-label text-capitalize">Soy İsim</label>
+                                    <input asp-for="LastName" name="LastName" class="form-control text-uppercase" type="text" disabled="disabled" value="@User.FindFirst("LastName").Value">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label">TC</label>
+                                    <input asp-for="Tc"  name="Tc" class="form-control"  disabled="disabled" value="@User.FindFirst("TC").Value">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label">Doğum Yılı</label>
+                                    <input asp-for="BirthDate" name="BirthDate" class="form-control" placeholder="1990">
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <button type="submit" class="btn btn-primary me-2">Doğrula</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /Account -->
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- / Content -->
+    <!-- Footer -->
+   
+    <!-- / Footer -->
+
+
+    <div class="content-backdrop fade"></div>
+</div>

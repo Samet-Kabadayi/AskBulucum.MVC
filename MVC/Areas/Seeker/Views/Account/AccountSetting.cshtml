@@ -1,0 +1,215 @@
+﻿<div class="content-wrapper">
+
+    <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+
+
+        <h4 class="fw-bold py-3 mb-4">
+            <span class="text-muted fw-light">Hesap Ayarları /</span> Düzenle
+        </h4>
+
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                    <li class="nav-item"><a class="nav-link active" href="javascript:void(0);"><i class="bx bx-user me-1"></i> Hesap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Seeker/Home/VerifyTc"><i class="bx bx-bell me-1"></i> Bildirimler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages-account-settings-connections.html"><i class="bx bx-link-alt me-1"></i> Bağlantılar</a></li>
+                </ul>
+                <div class="card mb-4">
+                    <h5 class="card-header">Profil Detayları</h5>
+                    <!-- Account -->
+                    <div class="card-body">
+                        <div class="d-flex align-items-start align-items-sm-center gap-4">
+                            <img src="../assets/img/avatars/1.png" alt="user-avatar" class="d-block rounded" height="100" width="100" id="uploadedAvatar">
+                            <div class="button-wrapper">
+                                <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
+                                    <span class="d-none d-sm-block">Yeni resim yükle</span>
+                                    <i class="bx bx-upload d-block d-sm-none"></i>
+                                    <input type="file" id="upload" class="account-file-input" hidden="" accept="image/png, image/jpeg">
+                                </label>
+                                <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
+                                    <i class="bx bx-reset d-block d-sm-none"></i>
+                                    <span class="d-none d-sm-block">Sıfırla</span>
+                                </button>
+
+                                <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-0">
+                    <div class="card-body">
+                        <form id="formAccountSettings" method="POST" onsubmit="return false">
+                            <div class="row">
+                                <div class="mb-3 col-md-6">
+                                    <label for="firstName" class="form-label text-capitalize">İsim</label>
+                                    <input class="form-control" type="text" id="firstName" name="firstName" placeholder="İsminizi giriniz" autofocus="">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label for="lastName" class="form-label text-capitalize">Soy İsim</label>
+                                    <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Soy isminizi giriniz">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label for="email" class="form-label">E-Mail</label>
+                                    <input class="form-control" type="text" id="email" name="email" placeholder="örnek@örnek.com">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label for="organization" class="form-label">Organization</label>
+                                    <input type="text" class="form-control" id="organization" name="organization" value="ThemeSelection">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label text-capitalize" for="phoneNumber">Telefon numarası</label>
+                                    <div class="input-group input-group-merge">
+                                        <span class="input-group-text">TR (+90)</span>
+                                        <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="XXX XXX XX XX">
+                                    </div>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label for="address" class="form-label">Adres</label>
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="Adres">
+                                </div>
+                                
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" for="country">Şehir</label>
+                                    <select id="Şehir" class="select2 form-select">
+                                        <option value="Seçiniz">Şehirler</option>
+                                        <option value="ADANA">ADANA</option>
+                                        <option value="ADIYAMAN">ADIYAMAN</option>
+                                        <option value="AFYONKARAHISAR">AFYONKARAHİSAR</option>
+                                        <option value="AGRI">AĞRI</option>
+                                        <option value="AKSARAY">AKSARAY</option>
+                                        <option value="AMASYA">AMASYA</option>
+                                        <option value="ANKARA">ANKARA</option>
+                                        <option value="ANTALYA">ANTALYA</option>
+                                        <option value="ARDAHAN">ARDAHAN</option>
+                                        <option value="ARTVIN">ARTVİN</option>
+                                        <option value="AYDIN">AYDIN</option>
+                                        <option value="BALIKESIR">BALIKESİR</option>
+                                        <option value="BARTIN">BARTIN</option>
+                                        <option value="BATMAN">BATMAN</option>
+                                        <option value="BAYBURT">BAYBURT</option>
+                                        <option value="BILECIK">BİLECİK</option>
+                                        <option value="BINGOL">BİNGÖL</option>
+                                        <option value="BITLIS">BİTLİS</option>
+                                        <option value="BOLU">BOLU</option>
+                                        <option value="BURDUR">BURDUR</option>
+                                        <option value="BURSA">BURSA</option>
+                                        <option value="CANAKKALE">ÇANAKKALE</option>
+                                        <option value="CANKIRI">ÇANKIRI</option>
+                                        <option value="CORUM">ÇORUM</option>
+                                        <option value="DENIZLI">DENİZLİ</option>
+                                        <option value="DIYARBAKIR">DİYARBAKIR</option>
+                                        <option value="DUZCE">DÜZCE</option>
+                                        <option value="EDIRNE">EDİRNE</option>
+                                        <option value="ELAZIĞ">ELAZIĞ</option>
+                                        <option value="ERZİNCAN">ERZİNCAN</option>
+                                        <option value="ERZURUM">ERZURUM</option>
+                                        <option value="ESKISEHIR">ESKİŞEHİR</option>
+                                        <option value="GAZIANTEP">GAZİANTEP</option>
+                                        <option value="GIRESUN">GİRSEUN</option>
+                                        <option value="GUMUSHANE">GÜMÜŞHANE</option>
+                                        <option value="HAKKARI">HAKKARİ</option>
+                                        <option value="HAYAT">HATAY</option>
+                                        <option value="IGDIR">IĞDIR</option>
+                                        <option value="ISPARTA">ISPARTA</option>
+                                        <option value="ISTANBUL">İSTANBUL</option>
+                                        <option value="İZMİR">İZMİR</option>
+                                        <option value="KAHRAMANMARAS">KAHRAMANMARAŞ</option>
+                                        <option value="KARABUK">KARABÜK</option>
+                                        <option value="KARAMAN">KARAMAN</option>
+                                        <option value="KARS">KARS</option>
+                                        <option value="KASTAMONU">KASTAMONU</option>
+                                        <option value="KAYSERI">KAYSERİ</option>
+                                        <option value="KILIS">KİLİS</option>
+                                        <option value="KIRIKKALE">KIRIKKALE</option>
+                                        <option value="KIRKLARELI">KIRKLARELİ</option>
+                                        <option value="KIRSEHIR">KIRŞEHİR</option>
+                                        <option value="KOCAELI">KOCAELI</option>
+                                        <option value="KONYA">KONYA</option>
+                                        <option value="KUTAHYA">KUTAHYA</option>
+                                        <option value="MALATYA">MALATYA</option>
+                                        <option value="MANISA">MANİSA</option>
+                                        <option value="MERSIN">MERSİN</option>
+                                        <option value="MARDIN">MARDİN</option>
+                                        <option value="MUGLA">MUĞLA</option>
+                                        <option value="MUŞ">MUS</option>
+                                        <option value="NEVSEHIR">NEVŞEHİR</option>
+                                        <option value="NIGDE">NİĞDE</option>
+                                        <option value="ORDU">ORDU</option>
+                                        <option value="OSMANIYE">OSMANİYE</option>
+                                        <option value="RIZE">RİZE</option>
+                                        <option value="SAKARYA">SAKARYA</option>
+                                        <option value="SAMSUN">SAMSUN</option>
+                                        <option value="SANLIURFA">ŞANLIURFA</option>
+                                        <option value="SIIRT">SİİRT</option>
+                                        <option value="SINOP">SİNOP</option>
+                                        <option value="SIVAS">SİVAS</option>
+                                        <option value="SIRNAK">ŞIRNAK</option>
+                                        <option value="TEKIRDAG">TEKİRDAĞ</option>
+                                        <option value="TOKAT">TOKAT</option>
+                                        <option value="TRABZON">TRABZON</option>
+                                        <option value="TUNCELI">TUNCELİ</option>
+                                        <option value="USAK">UŞAK</option>
+                                        <option value="VAN">VAN</option>
+                                        <option value="YALOVA">YALOVA</option>
+                                        <option value="YOZGAT">YOZGAT</option>
+                                        <option value="ZONGULDAK">ZONGULDAK</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="mt-2">
+                                <button type="submit" class="btn btn-primary me-2">Değişiklikleri Kaydet</button>
+                                <button type="reset" class="btn btn-outline-secondary">İptal</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /Account -->
+                </div>
+                <div class="card">
+                    <h5 class="card-header">Hesabımı Sil </h5>
+                    <div class="card-body">
+                        <div class="mb-3 col-12 mb-0">
+                            <div class="alert alert-warning">
+                                <h6 class="alert-heading fw-bold mb-1">Hesabınızı silmek istediğinizden emin misiniz?</h6>
+                                <p class="mb-0">Hesabınızı bir kez sildikten sonra geri dönüş yoktur. Lütfen emin olun.</p>
+                            </div>
+                        </div>
+                        <form id="formAccountDeactivation" onsubmit="return false">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" name="accountActivation" id="accountActivation">
+                                <label class="form-check-label" for="accountActivation">Hesabımın silinmesini onaylıyorum</label>
+                            </div>
+                            <button type="submit" class="btn btn-danger deactivate-account"><i class="em em-broken_heart me-2" aria-role="presentation" aria-label="BROKEN HEART"></i>Hesabımı Sil</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- / Content -->
+    <!-- Footer -->
+    <footer class="content-footer footer bg-footer-theme">
+        <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+            <div class="mb-2 mb-md-0">
+                ©
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                ,< ~~Abdulsamet Kabadayı ❤️ tarafından yapıldı~~>
+            </div>
+            <div>
+
+                <a href="https://www.linkedin.com/in/abdulsamet-kabadayi-b2a7b9198/" class="footer-link me-4" target="_blank">linkedin</a>
+
+            </div>
+        </div>
+    </footer>
+    <!-- / Footer -->
+
+
+    <div class="content-backdrop fade"></div>
+</div>
